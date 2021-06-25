@@ -13,6 +13,10 @@
 			href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
 			rel="stylesheet"
 		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+		/>
 	</head>
 	<body>
 		<!-- START NAVBAR SECTION -->
@@ -91,11 +95,23 @@
 							/>
 							<a
 								href="#"
-								class="position-absolute top-50 start-50 translate-middle"
+								class="
+									glightbox
+									position-absolute
+									top-50
+									start-50
+									translate-middle
+								"
 							>
 								<span>
 									<i class="fas fa-play-circle"></i>
 								</span>
+								<span
+									class="border-animation border-animation--border-1"
+								></span>
+								<span
+									class="border-animation border-animation--border-2"
+								></span>
 							</a>
 						</div>
 					</div>
@@ -115,5 +131,15 @@
 			integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
 			crossorigin="anonymous"
 		></script>
+		<script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
+		<script text="text/javascript">
+			const lightbox = GLightbox({
+				href: 'https://www.youtube.com/watch?v=-LGhX4DDFyg',
+				type: 'video',
+				source: 'youtube', //vimeo, youtube or local
+				width: 900,
+				autoPlayVideos: 'true',
+			});
+		</script>
 	</body>
 </html>
