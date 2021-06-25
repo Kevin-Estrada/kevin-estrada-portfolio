@@ -1,9 +1,12 @@
 {
+	"homepage": "https://Kevin-Estrada.github.io/kevin-estrada-portfolio",
 	"name": "bootstrap-sass-portfolio",
 	"version": "1.0.0",
 	"description": "This is a Bootstrap and Sass portfolio",
 	"main": "index.js",
 	"scripts": {
+		"predeploy": "sass scss:assets/css",
+		"deploy": "gh-pages -d build",
 		"compile:sass": "sass --watch scss:assets/css"
 	},
 	"keywords": [
@@ -16,6 +19,7 @@
 	"author": "Kevin Estrada",
 	"license": "ISC",
 	"devDependencies": {
+		"gh-pages": "^3.2.3",
 		"sass": "^1.35.1"
 	},
 	"dependencies": {
