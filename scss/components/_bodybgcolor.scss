@@ -1,10 +1,10 @@
-// @use '../custom' as *;
-// @use '../components/mixins' as *;
+@use '../custom' as *;
+@use '../components/mixins' as *;
 
-// html {
-// 	background: $primary !important;
-// }
+html {
+	background: $primary !important;
+}
 
-// body {
-// 	background: $primary !important;
-// }
+body {
+	background: $primary !important;
+}
