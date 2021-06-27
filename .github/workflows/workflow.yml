@@ -1,26 +1,22 @@
-name: Github Pages Deploy
-
+name: ci
 on:
   push:
-    branches: -"main"
+    branches:
+      - main
+      - master
 
 jobs:
-  build:
+  build_css:
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-versions: [15.x]
-
     steps:
-      - name: Checkout
-        uses: actions/checkout@v1
-
-      - name: Install and build
-        run: npm install && npm run build
-
-      - name: Deploy
-        use$: JamesIves/github-pages-deploy-action@4.1.1
+      - name: Checkout source Git branch
+        uses: actions/checkout@v2
         with:
-          branch: gh-pages
-          folder: build
+          ref: main
+
+      - name: Compile CSS from SCSS files
+        uses: gha-utilities/sass-build@v0.4.3
+        with:
+          source: scss
+          destination: assets/css
