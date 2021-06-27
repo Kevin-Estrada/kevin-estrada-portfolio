@@ -11096,4 +11096,93 @@ textarea.form-control-lg {
   text-transform: capitalize;
 }
 
+.footer {
+  padding-top: 1rem;
+  background-color: #151414;
+}
+
+.contact-box {
+  position: relative;
+}
+.contact-box__icon {
+  width: 2rem;
+  stroke: #9926f0;
+  padding-top: 0.5rem;
+}
+@media (min-width: 576px) {
+  .contact-box__icon {
+    width: 4rem;
+  }
+}
+.contact-box__info {
+  padding: 0.4rem;
+  font-weight: 600;
+}
+.contact-box__info--title {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+@media (min-width: 576px) {
+  .contact-box__info--title {
+    font-size: 1.4rem;
+  }
+}
+.contact-box__info--subtitle {
+  font-size: 0.8rem;
+  color: #6c757d;
+  text-decoration: none;
+}
+@media (min-width: 576px) {
+  .contact-box__info--subtitle {
+    font-size: 1rem;
+  }
+}
+
+.footer-social-media a {
+  color: #fff;
+}
+.footer-social-media a i {
+  font-size: 1rem;
+  margin-left: 1rem;
+}
+@media (min-width: 576px) {
+  .footer-social-media a i {
+    font-size: 1.6rem;
+  }
+}
+
+.company-list {
+  display: block;
+  list-style-type: none;
+  position: relative;
+}
+.company-list li {
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+}
+.company-list li a {
+  color: #fff;
+  text-decoration: none;
+}
+.company-list li a:hover {
+  color: #9926f0;
+}
+
+.footer-bottom {
+  background-color: #000;
+}
+.footer-bottom__copyright {
+  color: #6c757d;
+  font-weight: 400;
+}
+.footer-bottom__copyright a {
+  color: #dee2e6;
+  text-decoration: none;
+}
+.footer-bottom__copyright a:hover {
+  color: #9926f0;
+  text-decoration: underline;
+}
+
 /*# sourceMappingURL=style.css.map */
