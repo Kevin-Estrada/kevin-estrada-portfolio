@@ -16,6 +16,8 @@ jobs:
       - name: Install and Build
         run: |
           npm install
+          npm install -g browserify
+          npm run build-bundle-js
           npm run predeploy
 
       - name: Deploy
