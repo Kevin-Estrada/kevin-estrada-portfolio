@@ -15,8 +15,8 @@ jobs:
 
       - name: Install and Build
         run: |
-          npm install
-          npm install -g browserify
+          sudo npm install
+          sudo npm install -g browserify
           npm run build-bundle-js
           npm run predeploy
 
