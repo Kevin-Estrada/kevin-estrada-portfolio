@@ -101,7 +101,7 @@
     <div class="container" id="containerLangTech">
       <h4 class="text-center fw-bold lead mb-3">Languages & Web Technologies</h4>
       <div class="row justify-content-center" id="containerLangTechRow">
-        <div class="col-md-4 col-lg-2">
+        <!-- <div class="col-md-4 col-lg-2">
           <div class="technologies__logo-box shadow-sm">
             <img src="images/technologies/languages/java.png" alt="Java" title="Java"
               class="img-fluid">
@@ -118,18 +118,17 @@
             <img src="images/technologies/languages/python.png" alt="Python" title="Python"
               class="img-fluid">
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
 
     <!-- START THE FRAMEWORKS/LIBRARIES SECTION CONTENT  -->
     <div class="container">
       <h4 class="text-center fw-bold lead mb-3">Frameworks & Libraries</h4>
-      <div class="row justify-content-center">
+      <div class="row justify-content-center" id="containerFrameLibTechRow">
         <div class="col-md-4 col-lg-2">
           <div class="technologies__logo-box shadow-sm">
-            <img src="images/technologies/frame_libs/react.png" alt="React" title="React"
-              class="img-fluid">
+            <img src="images/technologies/frame_libs/react.png" alt="React" title="React" class="img-fluid">
           </div>
         </div>
         <div class="col-md-4 col-lg-2">
@@ -167,7 +166,8 @@
         <div class="col-md-6">
           <div class="bg-white p-4 text-start">
             <p class="fw-light">
-              Some of the experiences range from such areas as data operations, ride shring, reaserching, CAD analysis, marketing, etc... Please take a moment to see my most recent experiences!
+              Some of the experiences range from such areas as data operations, ride shring, reaserching, CAD analysis,
+              marketing, etc... Please take a moment to see my most recent experiences!
             </p>
           </div>
         </div>
@@ -176,18 +176,21 @@
 
     <!-- START THE CONTENT FOR THE WORK EXPERIENCES  -->
     <div class="container">
-      <!-- START THE MARKETING CONTENT  -->
+      <!-- START THE CAPGEMINI CONTENT  -->
       <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 work-experiences mt-4">
           <div class="work-experiences__content">
             <div class="icon d-block fas fa-paper-plane"></div>
-            <h3 class="display-3--title mt-1">Marketing</h3>
+            <h3 class="display-3--title mt-1">Associate Consultant</h3>
             <p class="lh-lg">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, impedit rem,
-              doloremque autem quibusdam blanditiis harum alias hic accusantium
-              maxime atque ratione magni repellat?
+            <ul>
+              <li>Company: Capgemini</li>
+              <li>Date(s): 02/2020 - Current</li>
+              <li>Location: Chicago, Il</li>
+            </ul>
             </p>
-            <button type="button" class="rounded-pill btn-rounded border-primary">Learn more
+            <button type="button" onclick="toggleButton()" data-bs-toggle="modal" data-bs-target="#modalOne"
+              class="rounded-pill btn-rounded border-primary">See More
               <span><i class="fas fa-arrow-right"></i></span>
             </button>
           </div>
@@ -200,12 +203,7 @@
       </div>
       <!-- START THE WEB DEVELOPMENT CONTENT  -->
       <div class="row">
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 work-experiences mt-4 text-start">
-          <div class="work-experiences__pic">
-            <img src="images/coding_pic_2.png" alt="web development illustration" class="img-fluid">
-          </div>
-        </div>
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 work-experiences mt-4">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 work-experiences mt-4 order-xl-last order-md-last">
           <div class="work-experiences__content">
             <div class="icon d-block fas fa-code"></div>
             <h3 class="display-3--title mt-1">web development</h3>
@@ -217,6 +215,11 @@
             <button type="button" class="rounded-pill btn-rounded border-primary">Learn more
               <span><i class="fas fa-arrow-right"></i></span>
             </button>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 work-experiences mt-4 text-start order-xl-first order-md-first">
+          <div class="work-experiences__pic">
+            <img src="images/coding_pic_2.png" alt="web development illustration" class="img-fluid">
           </div>
         </div>
       </div>
@@ -421,7 +424,8 @@
               <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <strong>I love to play basketball with a passion! I'm not a big fan of watching basketball on TV, but nonetheless, I still enjoy watching it at a high school level or city level!</strong>
+                  <strong>I love to play basketball with a passion! I'm not a big fan of watching basketball on TV, but
+                    nonetheless, I still enjoy watching it at a high school level or city level!</strong>
                 </div>
               </div>
             </div>
@@ -436,7 +440,9 @@
               <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <strong>When I'm not playing basketball, I like to spend my time either learning how to code, new tchnologies, etc... or pass my time playing video games! My favorite games at the moment are Smash Brothers Ultimate, Call Of Duty: Cold War, and Kingdom Hearts</strong>
+                  <strong>When I'm not playing basketball, I like to spend my time either learning how to code, new
+                    tchnologies, etc... or pass my time playing video games! My favorite games at the moment are Smash
+                    Brothers Ultimate, Call Of Duty: Cold War, and Kingdom Hearts</strong>
                 </div>
               </div>
             </div>
@@ -817,10 +823,68 @@
   </footer>
 
   <!-- BACK TO TOP BUTTON  -->
-  <a href="#" class="shadow btn-primary rounded-circle back-to-top">
+  <a href="#" id="scrollUpBtn" class="shadow btn-primary rounded-circle back-to-top">
     <i class="fas fa-chevron-up"></i>
   </a>
+ <!-- BACK TO TOP BUTTON  -->
 
+  <!-- Modals -->
+
+  <!-- Modal One -->
+  <div class="modal fade" id="modalOne" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalOneLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalOneLabel">Responsibilites and Tasks</h5>
+          <button type="button" onclick="toggleButton()" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <ul>
+            <li>As a new hire, underwent various training's in the Java language to understand how to integrate various
+              OOP concepts using JDBC, Spring, SpringBoot, MySQL, and Apache.</li>
+            <li>In addition to Java training, went through SDET training that included using Junit, Cucumber Framework,
+              and user stories to test application edge cases.</li>
+            <li>Worked in diﬀerent projects within ﬁnancial institutions that entitled a support role for software
+              applications and cloud data.</li>
+            <li>Using ServiceNow to keep track of any user incidents and change implementation requests that come into
+              our team's queue and act accordingly to resolve incidents or execute changes.</li>
+            <li>Provided support for various tasks such as monitoring ﬁle transfers, application status, implementing
+              changes, creating technical documentation, etc..</li>
+            <li>Joined various meetings to either provide updates on any job failures, batch incidents, or any support
+              related issues to the rest of the team.</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" onclick="toggleButton()" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Two -->
+  <div class="modal fade" id="modalTwo" tabindex="-1" aria-labelledby="modalTwoLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTwoLabel">Responsibilites and Tasks</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          This is the placeholder for duties!
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modals -->
+
+
+
+
+<!--SCRIPTS-->
+<script src="assets/js/userDefinedJs/toggleScrollButton.js"></script>
   <script src="assets/js/userDefinedJs/bundle.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"

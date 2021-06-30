@@ -10766,7 +10766,8 @@ textarea.form-control-lg {
 }
 @media (max-width: 575.98px) {
   .btn-rounded {
-    display: none;
+    font-size: 0.75rem;
+    padding: 0.9375rem 2.375rem 0.9375rem 0.25rem;
   }
 }
 .btn-rounded span {
@@ -10779,10 +10780,22 @@ textarea.form-control-lg {
   transform: translateY(-50%);
   border-radius: 50%;
 }
+@media (max-width: 575.98px) {
+  .btn-rounded span {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
 .btn-rounded span i {
   color: #fff;
   font-size: 1rem;
   line-height: 2.5rem;
+}
+@media (max-width: 575.98px) {
+  .btn-rounded span i {
+    font-size: 0.5rem;
+    line-height: 1.5rem;
+  }
 }
 .btn-rounded:hover {
   background: linear-gradient(to right, rgba(153, 38, 240, 0.95), rgba(209, 34, 227, 0.95));
@@ -10941,6 +10954,10 @@ textarea.form-control-lg {
   .work-experiences__content p {
     font-size: 1rem;
   }
+}
+.work-experiences__content ul {
+  list-style-type: none;
+  font-size: 1rem;
 }
 @media (min-width: 992px) {
   .work-experiences__content {

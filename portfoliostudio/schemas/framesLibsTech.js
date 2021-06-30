@@ -12,9 +12,24 @@ export default {
 			},
 		},
 		{
-			name: 'linkToDocs',
+			title: 'Alternate Image Text',
+			name: 'frameLibAltText',
+			type: 'string',
+			description: 'This is the field to put image alt text, otherwise blank',
+		},
+		{
+			name: 'frameLibLinkToDocs',
 			title: 'Link to Documentation, if none put "#',
 			type: 'url',
+			description:
+				'This is the field to put link to documentation, if none put "#',
 		},
 	],
+	preview: {
+		select: {
+			subtitle: 'frameLibLinkToDocs',
+			title: 'frameLibAltText',
+			media: 'frameLibImage',
+		},
+	},
 };
