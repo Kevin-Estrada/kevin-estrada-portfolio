@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="assets/vendors/css/glightbox.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -26,12 +27,13 @@
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link active" aria-current="page" href="#home">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="#work-experiences">Work Experience</a></li>
-          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="#certificates">Certificates</a></li>
-          <li class="nav-item"><a class="nav-link" href="#fun-facts">Fun Facts</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a>
+          <li class="nav-item active"><a class="nav-link js-scroll-trigger" aria-current="page" href="#home">Home</a>
+          </li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#work-experiences">Work Experience</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#certificates">Certificates</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#fun-facts">Fun Facts</a></li>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
           </li>
         </ul>
         <button type="button" class="rounded-pill btn-rounded">
@@ -126,7 +128,7 @@
     <div class="container">
       <h4 class="text-center fw-bold lead mb-3">Frameworks & Libraries</h4>
       <div class="row justify-content-center" id="containerFrameLibTechRow">
-        <div class="col-md-4 col-lg-2">
+        <!-- <div class="col-md-4 col-lg-2">
           <div class="technologies__logo-box shadow-sm">
             <img src="images/technologies/frame_libs/react.png" alt="React" title="React" class="img-fluid">
           </div>
@@ -142,7 +144,7 @@
             <img src="images/technologies/frame_libs/springboot.png" alt="Spring Boot" title="Spring Boot"
               class="img-fluid">
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>
@@ -180,7 +182,7 @@
       <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 work-experiences mt-4">
           <div class="work-experiences__content">
-            <div class="icon d-block fas fa-paper-plane"></div>
+            <div class="icon d-block fas fa-code"></div>
             <h3 class="display-3--title mt-1">Associate Consultant</h3>
             <p class="lh-lg">
             <ul>
@@ -201,23 +203,27 @@
           </div>
         </div>
       </div>
-      <!-- START THE WEB DEVELOPMENT CONTENT  -->
+      <!-- START THE SPR INTERNSHIP CONTENT  -->
       <div class="row">
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 work-experiences mt-4 order-xl-last order-md-last">
           <div class="work-experiences__content">
-            <div class="icon d-block fas fa-code"></div>
-            <h3 class="display-3--title mt-1">web development</h3>
+            <div class="icon d-block fas fa-paper-plane"></div>
+            <h3 class="display-3--title mt-1">Project Configuration</h3>
             <p class="lh-lg">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, impedit rem,
-              doloremque autem quibusdam blanditiis harum alias hic accusantium
-              maxime atque ratione magni repellat?
+            <ul>
+              <li>Company: USA Strategic Petroleum Reserve Internship</li>
+              <li>Date(s): 05/2019 - 08/2019</li>
+              <li>Location: New Orleans, LA</li>
+            </ul>
             </p>
-            <button type="button" class="rounded-pill btn-rounded border-primary">Learn more
+            <button type="button" onclick="toggleButton()" data-bs-toggle="modal" data-bs-target="#modalTwo"
+              class="rounded-pill btn-rounded border-primary">See More
               <span><i class="fas fa-arrow-right"></i></span>
             </button>
           </div>
         </div>
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 work-experiences mt-4 text-start order-xl-first order-md-first">
+        <div
+          class="col-lg-6 col-md-6 col-sm-12 col-xs-12 work-experiences mt-4 text-start order-xl-first order-md-first">
           <div class="work-experiences__pic">
             <img src="images/coding_pic_2.png" alt="web development illustration" class="img-fluid">
           </div>
@@ -823,20 +829,22 @@
   </footer>
 
   <!-- BACK TO TOP BUTTON  -->
-  <a href="#" id="scrollUpBtn" class="shadow btn-primary rounded-circle back-to-top">
+  <a href="#home" id="scrollUpBtn" class="shadow btn-primary rounded-circle back-to-top">
     <i class="fas fa-chevron-up"></i>
   </a>
- <!-- BACK TO TOP BUTTON  -->
+  <!-- BACK TO TOP BUTTON  -->
 
   <!-- Modals -->
 
   <!-- Modal One -->
-  <div class="modal fade" id="modalOne" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalOneLabel" aria-hidden="true">
+  <div class="modal fade" id="modalOne" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="modalOneLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="modalOneLabel">Responsibilites and Tasks</h5>
-          <button type="button" onclick="toggleButton()" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" onclick="toggleButton()" class="btn-close" data-bs-dismiss="modal"
+            aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <ul>
@@ -855,25 +863,62 @@
           </ul>
         </div>
         <div class="modal-footer">
-          <button type="button" onclick="toggleButton()" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" onclick="toggleButton()" class="btn btn-secondary"
+            data-bs-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
   </div>
 
   <!-- Modal Two -->
-  <div class="modal fade" id="modalTwo" tabindex="-1" aria-labelledby="modalTwoLabel" aria-hidden="true">
+  <div class="modal fade" id="modalTwo" data-bs-backdrop="static" tabindex="-1" aria-labelledby="modalTwoLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="modalTwoLabel">Responsibilites and Tasks</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button" onclick="toggleButton()" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          This is the placeholder for duties!
+          <ul>
+            <li>Performed research over government database that contains specific and general information of the
+              physical configuration of the oil reserve sites.</li>
+            <li>Developed concepts that set a foundation for the transition of AutoCAD processestowards a modern
+              automated software for future Department of Energy implementation.</li>
+            <li>Attended various sessions that established ideas, concepts, and procedures that would be implemented in
+              project Life Extension.</li>
+            <li>One of 50 selected individuals, from a group of over 300 applicants, to help a section of the United
+              States Department of Energy into starting a basis for a future project.</li>
+          </ul>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" onclick="toggleButton()" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Three -->
+  <div class="modal fade" id="modalThree" data-bs-backdrop="static" tabindex="-1" aria-labelledby="modalThreeLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalThreeLabel">Responsibilites and Tasks</h5>
+          <button type="button" onclick="toggleButton()" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <ul>
+            <li>Performed research over government database that contains specific and general information of the
+              physical configuration of the oil reserve sites.</li>
+            <li>Developed concepts that set a foundation for the transition of AutoCAD processestowards a modern
+              automated software for future Department of Energy implementation.</li>
+            <li>Attended various sessions that established ideas, concepts, and procedures that would be implemented in
+              project Life Extension.</li>
+            <li>One of 50 selected individuals, from a group of over 300 applicants, to help a section of the United
+              States Department of Energy into starting a basis for a future project.</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" onclick="toggleButton()" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
@@ -883,13 +928,15 @@
 
 
 
-<!--SCRIPTS-->
-<script src="assets/js/userDefinedJs/toggleScrollButton.js"></script>
+  <!--SCRIPTS-->
+  <script src="assets/js/userDefinedJs/toggleScrollButton.js"></script>
   <script src="assets/js/userDefinedJs/bundle.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
   <script src="assets/vendors/js/glightbox.min.js"></script>
+
+  <!-- <script src="assets/js/userDefinedJs/collapseHamburgerMenu.js"></script> -->
 
   <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
   <script text="text/javascript">
