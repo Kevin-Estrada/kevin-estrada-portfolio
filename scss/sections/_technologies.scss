@@ -1,5 +1,8 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+
 .technologies {
-	padding: 0 0 5rem 0;
+	@include gradient;
 
 	&__logo-box {
 		max-width: 100%;
@@ -8,6 +11,7 @@
 		padding: 0.5rem;
 		text-align: center;
 		position: relative;
+		background-color: $white;
 
 		img {
 			height: 100%;

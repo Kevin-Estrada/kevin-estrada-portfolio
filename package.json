@@ -3,12 +3,13 @@
 	"name": "bootstrap-sass-portfolio",
 	"version": "1.0.0",
 	"description": "This is a Bootstrap and Sass portfolio",
-	"main": "index.js",
 	"scripts": {
 		"predeploy": "sass scss:assets/css",
 		"deploy": "gh-pages -d build",
 		"compile:sass": "sass --watch scss:assets/css",
-		"build-bundle-js": "browserify assets/js/userDefinedJs/main.js > assets/js/userDefinedJs/bundle.js"
+		"build-bundle-js": "browserify public/assets/js/userDefinedJs/main.js > public/assets/js/userDefinedJs/bundle.js",
+		"dev-server": "nodemon server.js",
+		"prod-server": "node server.js"
 	},
 	"keywords": [
 		"Bootstrap",
@@ -21,6 +22,7 @@
 	"license": "ISC",
 	"devDependencies": {
 		"gh-pages": "^3.2.3",
+		"nodemon": "^2.0.9",
 		"sass": "^1.35.1"
 	},
 	"dependencies": {
@@ -28,7 +30,15 @@
 		"@sanity/client": "^2.11.0",
 		"autoprefixer": "^10.2.6",
 		"bootstrap": "^5.0.2",
+		"cors": "^2.8.5",
+		"dotenv": "^10.0.0",
+		"express": "^4.17.1",
 		"glightbox": "^3.0.9",
+		"multiparty": "^4.2.2",
+		"nodemailer": "^6.6.2",
 		"postcss-cli": "^8.3.1"
+	},
+	"engines": {
+		"node": "12.14.1"
 	}
 }
