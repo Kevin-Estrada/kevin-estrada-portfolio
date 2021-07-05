@@ -6,3 +6,6 @@ This is just a little quick summary about this project. Over the course of the t
 
 - SASS (Preprocessor)
 - Bootstrap 5 (Framework)
+- Sanity IO
+- Google Cloud Functions
+- NodeJs
