@@ -4,10 +4,10 @@
 	"version": "1.0.0",
 	"description": "This is a Bootstrap and Sass portfolio",
 	"scripts": {
-		"predeploy": "sass scss:public/assets/css",
+		"predeploy": "sass scss:docs/assets/css",
 		"deploy": "gh-pages -d build",
-		"compile:sass": "sass --watch scss:public/assets/css",
-		"build-bundle-js": "browserify public/assets/js/userDefinedJs/main.js > public/assets/js/userDefinedJs/bundle.js ; browserify public/assets/js/userDefinedJs/app.js > public/assets/js/userDefinedJs/bundleTwo.js",
+		"compile:sass": "sass --watch scss:docs/assets/css",
+		"build-bundle-js": "browserify docs/assets/js/userDefinedJs/main.js > docs/assets/js/userDefinedJs/bundle.js ; browserify docs/assets/js/userDefinedJs/app.js > docs/assets/js/userDefinedJs/bundleTwo.js",
 		"dev-server": "nodemon server.js",
 		"prod-server": "node server.js"
 	},
