@@ -5,6 +5,8 @@ let firstName = document.getElementById('inputFirstName');
 let lastName = document.getElementById('inputLastName');
 let email = document.getElementById('inputEmail');
 let message = document.getElementById('message');
+var element = document.getElementById('spinnerIcon');
+var para = document.getElementById('formSubText');
 
 // const url = 'http://localhost:8080/';
 const url =
@@ -13,6 +15,7 @@ const url =
 //1.
 form.addEventListener('submit', (event) => {
 	event.preventDefault();
+	element.classList.toggle('visually-hidden');
 	main();
 });
 
@@ -46,9 +49,20 @@ async function main() {
 
 	const res = await fetch(url, otherPram);
 	const json = await res.text();
-	console.log(json);
-	alert('Your form was submitted!');
-	form.reset();
+	if (json == 'Success') {
+		element.classList.toggle('visually-hidden');
+		para.innerHTML = 'Your form was successfully submitted! Thank you!';
+		$('#formModal').modal('show');
+		form.reset();
+		console.log(json);
+	} else {
+		element.classList.toggle('visually-hidden');
+		para.innerHTML =
+			'Something went wrong, please try again to resubmit your contact form!';
+		$('#formModal').modal('show');
+		form.reset();
+		console.log(json);
+	}
 }
 
 // main();

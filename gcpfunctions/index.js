@@ -11,11 +11,7 @@ exports.sendEmail = async (req, res) => {
 			console.log(req.body.lastName);
 			console.log(req.body.email);
 			console.log(req.body.message);
-			res
-				.status(200)
-				.send(
-					`Recieved the following: ${req.body.firstName},${req.body.lastName},${req.body.email},${req.body.message}`
-				);
+			res.status(200).send('Success');
 		} catch (error) {
 			//return an error
 			console.log('got error: ', error);

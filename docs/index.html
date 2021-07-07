@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="assets/vendors/css/glightbox.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -561,7 +562,7 @@
       <div class="row text-center">
         <h1 class="display-3 fw-bold text-uppercase">Few Fun Facts!</h1>
         <div class="heading-line"></div>
-        <p class="lead">Frequently Asked Questions!</p>
+        <p class="lead">Just a little section for fun facts about me and my life, hobbies, etc!</p>
       </div>
       <!-- ACCORDION CONTENT  -->
       <div class="row mt-5">
@@ -605,17 +606,16 @@
               <h2 class="accordion-header" id="headingThree">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  Item 3 subject
+                  Fun Fact Number 3!
                 </button>
               </h2>
               <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse
-                  plugin adds the appropriate classes that we use to style each element. These classes control the
-                  overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this
-                  with custom CSS or overriding our default variables. It's also worth noting that just about any HTML
-                  can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  I love my fiancée so much, that I ended up proposing taking her on a full expense (flight, hotel, and
+                  rental car) one week trip to Hawaii, just to propose to her! It was her first time at a beach, my
+                  first time ziplining, and our first time out of the state! It was a very wonderful and beautiful
+                  vacation for the both of us! I rate 10/10, would do it again!
                 </div>
               </div>
             </div>
@@ -624,17 +624,14 @@
               <h2 class="accordion-header" id="headingFour">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                  Item 4 subject
+                  Fun Fact Number 4!
                 </button>
               </h2>
               <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                  <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse
-                  plugin adds the appropriate classes that we use to style each element. These classes control the
-                  overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this
-                  with custom CSS or overriding our default variables. It's also worth noting that just about any HTML
-                  can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                  I currently have 2 brothers, a sister, and a niece! Although, I have now a nephew on the way, so I am
+                  super stoked to have another addition to our family! Looking forward to it and many more!
                 </div>
               </div>
             </div>
@@ -651,12 +648,13 @@
         <h1 class="display-3 fw-bold text-capitalize">Contact Me!</h1>
         <div class="heading-line"></div>
         <p class="lh-lg">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Libero illum architecto modi.
+          Fill out the form below and it should send me a message with all below info straight to my personal email! I
+          should be able to contact you via email within a couple of hours! Don't be shy!
         </p>
       </div>
 
-      <!-- START THE CTA CONTENT  -->
-      <div class="row text-white">
+      <!-- START THE CONTACT FORM CONTENT  -->
+      <!-- <div class="row text-white">
         <div class="col-12 col-lg-6 gradient shadow p-3">
           <div class="cta-info w-100">
             <h4 class="display-4 fw-bold">100% Satisfaction Guaranteed</h4>
@@ -671,37 +669,40 @@
               <li>Let's start the discussion.</li>
             </ul>
           </div>
-        </div>
-        <div class="col-12 col-lg-6 bg-white shadow p-3">
-          <div class="form w-100 pb-2">
-            <h4 class="display-3--title mb-5">Start Your Project</h4>
-            <form class="row contact-form" id="contact-form">
-              <div class="col-lg-6 col-md mb-3">
-                <input type="text" placeholder="First Name" id="inputFirstName" name="inputFirstName"
-                  class="shadow form-control form-control-lg" required>
-              </div>
-              <div class="col-lg-6 col-md mb-3">
-                <input type="text" placeholder="Last Name" id="inputLastName" name="inputLastName"
-                  class="shadow form-control form-control-lg" required>
-              </div>
-              <div class="col-lg-12 mb-3">
-                <input type="email" placeholder="Email Address" id="inputEmail" name="inputEmail"
-                  class="shadow form-control form-control-lg" required>
-              </div>
-              <div class="col-lg-12 mb-3">
-                <textarea name="message" placeholder="Message" id="message" name="message" rows="8"
-                  class="shadow form-control form-control-lg" required></textarea>
-              </div>
-              <div class="text-center d-grid mt-1">
-                <button type="submit" value="submit" class="btn btn-primary rounded-pill pt-3 pb-3">
-                  Submit
-                  <i class="fas fa-paper-plane"></i>
-                </button>
-              </div>
-            </form>
-          </div>
+        </div> -->
+      <div class="bg-white shadow p-3">
+        <div class="form w-100 pb-2">
+          <h4 class="display-3--title mb-5">Contact me with a personal message!</h4>
+          <form class="row contact-form" id="contact-form">
+            <div class="col-lg-6 col-md mb-3">
+              <input type="text" placeholder="First Name" id="inputFirstName" name="inputFirstName"
+                class="shadow form-control form-control-lg" required>
+            </div>
+            <div class="col-lg-6 col-md mb-3">
+              <input type="text" placeholder="Last Name" id="inputLastName" name="inputLastName"
+                class="shadow form-control form-control-lg" required>
+            </div>
+            <div class="col-lg-12 mb-3">
+              <input type="email" placeholder="Email Address" id="inputEmail" name="inputEmail"
+                class="shadow form-control form-control-lg" required>
+            </div>
+            <div class="col-lg-12 mb-3">
+              <textarea name="message" placeholder="Message" id="message" name="message" rows="8"
+                class="shadow form-control form-control-lg" required></textarea>
+            </div>
+            <div class="text-center d-grid mt-1">
+              <button type="submit" value="submit" onclick="toggleButton()"
+                class="btn btn-primary rounded-pill pt-3 pb-3">
+                <span id="spinnerIcon" class="spinner-border spinner-border-sm visually-hidden" role="status"
+                  aria-hidden="true"></span>
+                Submit
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </div>
+          </form>
         </div>
       </div>
+    </div>
     </div>
   </section>
 
@@ -722,7 +723,7 @@
             </svg>
           </div>
           <div class="contact-box__info">
-            <a href="#" class="contact-box__info--title">(830) 765-8589</a>
+            <a class="contact-box__info--title">(830) 765-8589</a>
             <p class="contact-box__info--subtitle"> Mon-Fri 8am-6pm | Sat-Sun 10am-6pm</p>
           </div>
         </div>
@@ -739,7 +740,7 @@
             </svg>
           </div>
           <div class="contact-box__info">
-            <a href="#" class="contact-box__info--title">ke81297@gmail.com</a>
+            <a href="mailto:ke81297@gmail.com" target="_blank" class="contact-box__info--title">ke81297@gmail.com</a>
             <p class="contact-box__info--subtitle">Email me!</p>
           </div>
         </div>
@@ -757,7 +758,8 @@
             </svg>
           </div>
           <div class="contact-box__info">
-            <a href="#" class="contact-box__info--title">Eagle Pass, TX</a>
+            <a href="https://goo.gl/maps/2UXb3tfrzWDf7aLx9" target="_blank" class="contact-box__info--title">Eagle Pass,
+              TX</a>
             <p class="contact-box__info--subtitle">TX 78852, US</p>
           </div>
         </div>
@@ -772,11 +774,11 @@
             Connect With Me on Social Media!
           </div>
           <div class="col-lg-7 col-md-6">
-            <a href="https://www.facebook.com/Estrada.Nash.12"><i class="fab fa-facebook"></i></a>
-            <a href="#updatelater"><i class="fab fa-twitter"></i></a>
-            <a href="https://github.com/Kevin-Estrada"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/kevinestrada1213/"><i class="fab fa-linkedin"></i></a>
-            <a href="#updatelater"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/Estrada.Nash.12" target="_blank"><i class="fab fa-facebook"></i></a>
+            <!-- <a href="#updatelater"><i class="fab fa-twitter" target="_blank"></i></a> -->
+            <a href="https://github.com/Kevin-Estrada" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/kevinestrada1213/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <!-- <a href="#updatelater"><i class="fab fa-instagram"></i></a> -->
           </div>
         </div>
       </div>
@@ -932,6 +934,27 @@
             <li>Performed various tasks such as mentoring other students with the science, methodology, and application
               of the projects in order to assist within the project.</li>
           </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" onclick="toggleButton()" class="btn btn-secondary"
+            data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Form Modal -->
+  <div class="modal fade" id="formModal" data-bs-backdrop="static" tabindex="-1" aria-labelledby="formModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="formModalLabel">Email Status</h5>
+          <button type="button" onclick="toggleButton()" class="btn-close" data-bs-dismiss="modal"
+            aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p id="formSubText"></p>
         </div>
         <div class="modal-footer">
           <button type="button" onclick="toggleButton()" class="btn btn-secondary"
