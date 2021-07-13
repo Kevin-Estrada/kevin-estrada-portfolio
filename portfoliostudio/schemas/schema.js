@@ -7,6 +7,7 @@ import schemaTypes from 'all:part:@sanity/base/schema-type';
 import languageTech from './languageTech';
 import framesLibsTech from './framesLibsTech';
 import projectsDoc from './projectsDoc';
+import certificatesDoc from './certificatesDoc';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -20,6 +21,7 @@ export default createSchema({
 		languageTech,
 		framesLibsTech,
 		projectsDoc,
+		certificatesDoc,
 		// When added to this list, object types can be used as
 		// { type: 'typename' } in other document schemas
 	]),

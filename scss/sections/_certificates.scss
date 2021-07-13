@@ -8,7 +8,8 @@
 
 	&__card {
 		background-color: rgba($white, 0.8);
-		padding: 2rem 1.25rem;
+		padding: 1rem 1.25rem;
+		margin-bottom: 1rem;
 		border-radius: 0.625rem;
 		height: auto;
 		text-align: center;
@@ -53,6 +54,18 @@
 		p {
 			padding-bottom: 2rem;
 			text-transform: capitalize;
+		}
+	}
+
+	&__desc {
+		list-style: none;
+		font-style: italic;
+
+		li:nth-child(1) {
+			font-weight: bold;
+		}
+		li:nth-child(3) {
+			color: rgba(gray, 0.8);
 		}
 	}
 }
