@@ -9,9 +9,9 @@ let message = document.getElementById('message');
 var element = document.getElementById('spinnerIcon');
 var para = document.getElementById('formSubText');
 
-const url = 'http://localhost:8080/';
-// const url =
-// 	'https://us-central1-web-portfolio-318903.cloudfunctions.net/sendEmail';
+// const url = 'http://localhost:8080/';
+const url =
+	'https://us-central1-web-portfolio-318903.cloudfunctions.net/sendEmail';
 
 //1.
 form.addEventListener('submit', (event) => {

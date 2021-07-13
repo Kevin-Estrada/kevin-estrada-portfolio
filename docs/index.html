@@ -19,16 +19,18 @@
   <!--START THE NAVBAR SECTION-->
   <nav class="navbar navbar-expand-lg navbar-dark menu shadow fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#home">
+      <a class="navbar-brand js-scroll-trigger" href="#home">
         <img src="images/basketball.png" alt="logo image"> Kevin Estrada
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <span class="toggler-icon top-bar"></span>
+        <span class="toggler-icon middle-bar"></span>
+        <span class="toggler-icon bottom-bar"></span>
       </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item active"><a class="nav-link js-scroll-trigger" aria-current="page" href="#home">Home</a>
+          <li class="nav-item"><a class="nav-link js-scroll-trigger" aria-current="page" href="#home">Home</a>
           </li>
           <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#work-experiences">Work Experience</a></li>
           <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Projects</a></li>
@@ -37,12 +39,6 @@
           <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
           </li>
         </ul>
-        <button type="button" class="rounded-pill btn-rounded">
-          (830) 765-8589
-          <span>
-            <i class="fas fa-phone-alt"></i>
-          </span>
-        </button>
       </div>
     </div>
   </nav>
@@ -416,43 +412,34 @@
         <hr style="width: 100px; height: 3px; " class="mx-auto">
         <p class="lead pt-1">A little section of any of my certifications!</p>
       </div>
-
       <!-- START THE CAROUSEL CONTENT  -->
       <div class="row align-items-center">
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-          <div class="carousel-inner">
-            <!-- CAROUSEL ITEM 1 -->
+          <div class="carousel-inner" id="carouselIdPlace">
+            <!-- CAROUSEL ITEM 1
             <div class="carousel-item active">
-              <!-- certificates card  -->
+              certificates card 
               <div class="certificates__card">
-                <p class="lh-lg">
-                  <i class="fas fa-quote-left"></i>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Placeat aut consequatur illo animi optio exercitationem doloribus eligendi iusto atque repudiandae.
-                  Distinctio.
-                  <i class="fas fa-quote-right"></i>
-                <div class="ratings p-1">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                </p>
-              </div>
-              <!-- client picture  -->
-              <div class="certificates__picture">
-                <img src="images/tesctimonials/lient-1.jpg" alt="client-1 picture" class="rounded-circle img-fluid">
-              </div>
-              <!-- client name & role  -->
-              <div class="certificates__name">
-                <h3>Client 1</h3>
-                <p class="fw-light">Role 1</p>
+                <h3>Certificate Number One</h3>
+                <ul class="certificates__desc">
+                  <li>
+                    Organization issuer:
+                  </li>
+                  <li>
+                    Date Issued:
+                  </li>
+                  <li>
+                    Certificate ID:
+                  </li>
+                  <li>
+                    <a href="https://www.google.com" target="_blank">See Certificate</a>
+                  </li>
+                </ul>
               </div>
             </div>
-            <!-- CAROUSEL ITEM 2 -->
+            CAROUSEL ITEM 2
             <div class="carousel-item">
-              <!-- certificates card  -->
+              certificates card 
               <div class="certificates__card">
                 <p class="lh-lg">
                   <i class="fas fa-quote-left"></i>
@@ -469,19 +456,19 @@
                 </div>
                 </p>
               </div>
-              <!-- client picture  -->
+              client picture 
               <div class="certificates__picture">
                 <img src="images/certificates/client-2.jpg" alt="client-2 picture" class="rounded-circle img-fluid">
               </div>
-              <!-- client name & role  -->
+              client name & role 
               <div class="certificates__name">
                 <h3>Client 2</h3>
                 <p class="fw-light">Role 2</p>
               </div>
             </div>
-            <!-- CAROUSEL ITEM 3 -->
+            CAROUSEL ITEM 3
             <div class="carousel-item">
-              <!-- certificates card  -->
+              certificates card 
               <div class="certificates__card">
                 <p class="lh-lg">
                   <i class="fas fa-quote-left"></i>
@@ -498,19 +485,19 @@
                 </div>
                 </p>
               </div>
-              <!-- client picture  -->
+              client picture 
               <div class="certificates__picture">
                 <img src="images/certificates/client-3.jpg" alt="client-3 picture" class="rounded-circle img-fluid">
               </div>
-              <!-- client name & role  -->
+              client name & role 
               <div class="certificates__name">
                 <h3>Client 3</h3>
                 <p class="fw-light">Role 3</p>
               </div>
             </div>
-            <!-- CAROUSEL ITEM 4 -->
+            CAROUSEL ITEM 4
             <div class="carousel-item">
-              <!-- certificates card  -->
+              certificates card 
               <div class="certificates__card">
                 <p class="lh-lg">
                   <i class="fas fa-quote-left"></i>
@@ -527,16 +514,16 @@
                 </div>
                 </p>
               </div>
-              <!-- client picture  -->
+              client picture 
               <div class="certificates__picture">
                 <img src="images/certificates/client-4.jpg" alt="client-4 picture" class="rounded-circle img-fluid">
               </div>
-              <!-- client name & role  -->
+              client name & role 
               <div class="certificates__name">
                 <h3>Client 4</h3>
                 <p class="fw-light">Role 4</p>
               </div>
-            </div>
+            </div> -->
           </div>
           <div class="text-center">
             <button class="btn btn-outline-light fas fa-long-arrow-alt-left" type="button"
@@ -580,7 +567,10 @@
                 data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                   <strong>I love to play basketball with a passion! I'm not a big fan of watching basketball on TV, but
-                    nonetheless, I still enjoy watching it at a high school level or city level!</strong>
+                    nonetheless, I still enjoy watching it at a high school level or city level! In addition to this
+                    hobby, I also LOVE coffee as much as I love basketball! I have all sorts of contraptions, such as a
+                    Ninja coffee brewer, French Press, Espresso Machine, and looking into investing into more coffee
+                    products!</strong>
                 </div>
               </div>
             </div>
@@ -723,7 +713,7 @@
             </svg>
           </div>
           <div class="contact-box__info">
-            <a class="contact-box__info--title">(830) 765-8589</a>
+            <a class="contact-box__info--title" href="tel:830-765-8589">(830) 765-8589</a>
             <p class="contact-box__info--subtitle"> Mon-Fri 8am-6pm | Sat-Sun 10am-6pm</p>
           </div>
         </div>
@@ -857,7 +847,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="modalOneLabel">Responsibilites and Tasks</h5>
+          <h5 class="modal-title display-3--title" id="modalOneLabel">Responsibilites and Tasks</h5>
           <button type="button" onclick="toggleButton()" class="btn-close" data-bs-dismiss="modal"
             aria-label="Close"></button>
         </div>
@@ -970,10 +960,7 @@
 
   <!--SCRIPTS-->
   <script src="assets/js/userDefinedJs/toggleScrollButton.js"></script>
-  <!-- <script src="index.js"></script> -->
-  <!-- <script src="server.js"></script> -->
-  <!-- <script src="assets/js/userDefinedJs/app.js"></script> -->
-  <!-- <script src="assets/js/userDefinedJs/main.js"></script> -->
+  <script src="assets/js/userDefinedJs/collapseNavBar.js"></script>
   <script src="assets/js/userDefinedJs/bundle.js"></script>
   <script src="assets/js/userDefinedJs/bundleTwo.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
@@ -981,10 +968,8 @@
     crossorigin="anonymous"></script>
   <script src="assets/vendors/js/glightbox.min.js"></script>
 
-  <!-- <script src="assets/js/userDefinedJs/collapseHamburgerMenu.js"></script> -->
-
   <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
-  <script text="text/javascript">
+  <script type="text/javascript">
     const lightbox = GLightbox({
       href: 'https://www.youtube.com/watch?v=-LGhX4DDFyg',
       type: 'video',
@@ -993,6 +978,13 @@
       autoPlayVideos: 'true',
     });
   </script>
+
+  <script type="text/javascript">
+    $('.js-scroll-trigger').click(function () {
+      $('.navbar-collapse').collapse('hide');
+    });
+  </script>
+
 </body>
 
 </html>

@@ -19,16 +19,16 @@ export default {
 		{
 			name: 'linkToProject',
 			title: 'Link to Working Project',
-			type: 'url',
+			type: 'string',
 			description:
-				'This is a link to the project itself, if not created yet, put "/pages/project-not-found.html"',
+				'This is a link to the project itself, if not created yet, put "NA"',
 		},
 		{
 			name: 'linkToProjectRepo',
 			title: 'Link to Project Repo',
 			type: 'url',
 			description:
-				'This is a link to the project repo, if not created yet, put  "/pages/project-not-found.html"',
+				'This is a link to the project repo, if not created yet, put  "NA"',
 		},
 	],
 	preview: {
