@@ -42,9 +42,9 @@ async function fetchFunction() {
 			var newNodeThree = document.createElement('div');
 			newNodeThree.className = 'col-lg-4 col-md-6';
 			if (response[x].linkToProject == 'NA') {
-				newNodeThree.innerHTML = `<div class="card shadow"><div class="card-body"><h5 class="card-title text-decoration-underline">${response[x].NameOfProject}</h5><p class="card-text">${response[x].descOfProject}</p><a href="/docs/pages/project-not-found.html" class="btn btn-primary text-white">Project Link</a><a href="${response[x].linkToProjectRepo}" target="_blank" class="btn btn-secondary text-white">Repo Link</a></div></div>`;
+				newNodeThree.innerHTML = `<div class="card shadow"><div class="card-body"><h5 class="card-title text-decoration-underline">${response[x].NameOfProject}</h5><p class="card-text">${response[x].descOfProject}</p><a href="/docs/pages/project-not-found.html" class="btn btn-primary text-white" style="margin-right: 1rem;">Project Link</a><a href="${response[x].linkToProjectRepo}" target="_blank" class="btn btn-secondary text-white">Repo Link</a></div></div>`;
 			} else {
-				newNodeThree.innerHTML = `<div class="card shadow"><div class="card-body"><h5 class="card-title text-decoration-underline">${response[x].NameOfProject}</h5><p class="card-text">${response[x].descOfProject}</p><a href="${response[x].linkToProject}" target="_blank" class="btn btn-primary text-white">Project Link</a><a href="${response[x].linkToProjectRepo}" target="_blank" class="btn btn-secondary text-white">Repo Link</a></div></div>`;
+				newNodeThree.innerHTML = `<div class="card shadow"><div class="card-body"><h5 class="card-title text-decoration-underline">${response[x].NameOfProject}</h5><p class="card-text">${response[x].descOfProject}</p><a href="${response[x].linkToProject}" target="_blank" class="btn btn-primary text-white" style="margin-right: 1rem;">Project Link</a><a href="${response[x].linkToProjectRepo}" target="_blank" class="btn btn-secondary text-white">Repo Link</a></div></div>`;
 			}
 			containerProjectsDocRowVar.appendChild(newNodeThree);
 		} else {
