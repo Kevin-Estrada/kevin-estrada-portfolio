@@ -20,7 +20,6 @@ jobs:
           sudo npm install -g browserify
           sudo npm install
           cd node_modules/font-awesome/ | sass-migrator division **/*.scss
-          cd ../../
           npm run build-bundle-js
           npm run predeploy
 
