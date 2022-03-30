@@ -15,6 +15,7 @@ jobs:
 
       - name: Install and Build
         run: |
+          cd frontend/
           sudo npm install
           sudo npm install -g browserify
           npm run build-bundle-js
