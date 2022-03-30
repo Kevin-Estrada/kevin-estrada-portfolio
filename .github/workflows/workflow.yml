@@ -16,12 +16,9 @@ jobs:
       - name: Install and Build
         run: |
           cd frontend/
-          sudo npm install -g sass-migrator
           sudo npm install -g browserify
           sudo npm install
-          cd node_modules/font-awesome/ | sass-migrator division **/*.scss
           npm run build-bundle-js
-          npm run predeploy
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@4.1.4
