@@ -16,8 +16,11 @@ jobs:
       - name: Install and Build
         run: |
           cd frontend/
-          sudo npm install
+          sudo npm install -g sass-migrator
           sudo npm install -g browserify
+          sudo npm install
+          cd node_modules/font-awesome/ | sass-migrator division **/*.scss
+          cd ../../
           npm run build-bundle-js
           npm run predeploy
 
