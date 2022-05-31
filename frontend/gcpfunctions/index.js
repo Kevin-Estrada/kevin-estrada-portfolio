@@ -33,11 +33,26 @@ exports.sendEmail = async (req, res) => {
       text: `First Name: ${req.body.firstName}\nLast Name: ${req.body.lastName}\nEmail: ${req.body.email}\nMessage: ${req.body.message}`,
     };
 
+    let mailResponse = {
+      from: process.env.EMAIL,
+      to: [req.body.email, process.env.EMAIL],
+      subject: 'Kevin Estrada Email Response',
+      text: `Hello ${req.body.firstName},\n\nThank you for contacting me! I recieved your email and I should be able to send you a response within 24 hours!\n\nThank you,\nKevin Estrada`,
+    };
+
     mailTransporter.sendMail(mailDetails, function (err, data) {
       if (err) {
-        console.log(err, 'Error Occurs');
+        console.log(err, 'Web Portfolio Error Occurs');
       } else {
-        console.log('Email sent successfully');
+        console.log('Web Portfolio Email sent successfully');
+      }
+    });
+
+    mailTransporter.sendMail(mailResponse, function (err, data) {
+      if (err) {
+        console.log(err, 'Multiple People Email Error Occurs');
+      } else {
+        console.log('Multiple People Email sent successfully');
       }
     });
   });
