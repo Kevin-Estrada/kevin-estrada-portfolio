@@ -10,14 +10,83 @@ let message = document.getElementById('message');
 var element = document.getElementById('spinnerIcon');
 var para = document.getElementById('formSubText');
 
+//Get the button:
+let mybutton = document.getElementById('scrollUpBtn');
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (
+    document.body.scrollTop > 300 ||
+    document.documentElement.scrollTop > 300
+  ) {
+    mybutton.style.display = 'block';
+  } else {
+    mybutton.style.display = 'none';
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+document.getElementById('scrollUpBtn').addEventListener('click', topFunction);
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
+
+document.getElementById('modalBtnOne').addEventListener('click', toggleButton);
+document.getElementById('modalBtnTwo').addEventListener('click', toggleButton);
+document
+  .getElementById('modalBtnThree')
+  .addEventListener('click', toggleButton);
+document.getElementById('modalBtnFour').addEventListener('click', toggleButton);
+
+document
+  .getElementById('closeXModalOne')
+  .addEventListener('click', toggleButton);
+document
+  .getElementById('closeModalOneFooter')
+  .addEventListener('click', toggleButton);
+
+document
+  .getElementById('closeXModalTwo')
+  .addEventListener('click', toggleButton);
+document
+  .getElementById('closeModalTwoFooter')
+  .addEventListener('click', toggleButton);
+
+document
+  .getElementById('closeXModalThree')
+  .addEventListener('click', toggleButton);
+document
+  .getElementById('closeModalThreeFooter')
+  .addEventListener('click', toggleButton);
+
+document
+  .getElementById('closeXModalFour')
+  .addEventListener('click', toggleButton);
+document
+  .getElementById('closeModalFourFooter')
+  .addEventListener('click', toggleButton);
+
+function toggleButton(e) {
+  let myButton = document.getElementById('scrollUpBtn');
+  myButton.classList.toggle('visually-hidden');
+}
+
 const query =
-  '*[_type == "languageTech" || _type == "framesLibsTech" || _type == "projectsDoc" || _type == "certificatesDoc"] {langLinkToDocs, langAltText, langImage{asset->{_id,url}}, frameLibLinkToDocs, frameLibAltText, frameLibImage{asset->{_id,url}}, NameOfProject, descOfProject, linkToProject, linkToProjectRepo, nameOfCert,issuingOrg,issueDate,certId,certUrl}';
+  '*[_type == "languageTech" || _type == "framesLibsTech" || _type == "projectsDoc" || _type == "certificatesDoc"] {langLinkToDocs, langAltText, langImage{asset->{_id,url}}, frameLibLinkToDocs, frameLibAltText, frameLibImage{asset->{_id,url}}, NameOfProject, projectImg{asset->{_id,url}}, descOfProject, linkToProject, linkToProjectRepo, nameOfCert,issuingOrg,issueDate,certId,certUrl}';
 
 var containerLangTechRowVar = document.getElementById('containerLangTechRow');
+var containerLangTechDisplay = document.getElementById('langAndTech');
 
 var containerFrameLibTechRowVar = document.getElementById(
   'containerFrameLibTechRow'
 );
+var containerFrameLibTechDisplay = document.getElementById('libAndFrameworks');
+
 var containerProjectsDocRowVar = document.getElementById(
   'containerProjectsDocRow'
 );
@@ -89,11 +158,13 @@ async function fetchFunction() {
     // console.log(Object.keys(response[x])[0]);
 
     if (Object.keys(response[x])[0] == 'langAltText') {
+      containerLangTechDisplay.style.display = 'none';
       var newNodeOne = document.createElement('div');
       newNodeOne.className = 'col-md-4 col-lg-2';
       newNodeOne.innerHTML = `<div class="technologies__logo-box shadow-sm"><a href="${response[x].langLinkToDocs}" target="_blank"><img src="${response[x].langImage.asset.url}" alt="${response[x].langAltText}" title="${response[x].langAltText}"class="img-fluid"></a></div>`;
       containerLangTechRowVar.appendChild(newNodeOne);
     } else if (Object.keys(response[x])[0] == 'frameLibAltText') {
+      containerFrameLibTechDisplay.style.display = 'none';
       var newNodeTwo = document.createElement('div');
       newNodeTwo.className = 'col-md-4 col-lg-2';
       newNodeTwo.innerHTML = `<div class="technologies__logo-box shadow-sm"><a href="${response[x].frameLibLinkToDocs}" target="_blank"><img src="${response[x].frameLibImage.asset.url}" alt="${response[x].frameLibAltText}" title="${response[x].frameLibAltText}"class="img-fluid"></a></div>`;
@@ -102,9 +173,9 @@ async function fetchFunction() {
       var newNodeThree = document.createElement('div');
       newNodeThree.className = 'col-lg-4 col-md-6';
       if (response[x].linkToProject == 'NA') {
-        newNodeThree.innerHTML = `<div class="card shadow"><div class="card-body"><h5 class="card-title text-decoration-underline">${response[x].NameOfProject}</h5><p class="card-text">${response[x].descOfProject}</p><a href="/docs/pages/project-not-found.html" class="btn btn-primary text-white" style="margin-right: 1rem;">Project Link</a><a href="${response[x].linkToProjectRepo}" target="_blank" class="btn btn-secondary text-white">Repo Link</a></div></div>`;
+        newNodeThree.innerHTML = `<div class="card shadow mb-3"><img src="images/comingSoon.jpg" style="height:300px;" class="card-img-top project-image" alt="Project Coming Soon"/><div class="card-body"><h5 class="card-title text-decoration-underline">${response[x].NameOfProject}</h5><p class="card-text">${response[x].descOfProject}</p><div class="project-links"><a href="pages/project-not-found.html" target="_blank" class="btn btn-primary text-white" style="margin-right: 1rem;">Project Link</a><a href="${response[x].linkToProjectRepo}" target="_blank" class="btn btn-secondary text-white">Repo Link</a></div></div></div>`;
       } else {
-        newNodeThree.innerHTML = `<div class="card shadow"><div class="card-body"><h5 class="card-title text-decoration-underline">${response[x].NameOfProject}</h5><p class="card-text">${response[x].descOfProject}</p><a href="${response[x].linkToProject}" target="_blank" class="btn btn-primary text-white" style="margin-right: 1rem;">Project Link</a><a href="${response[x].linkToProjectRepo}" target="_blank" class="btn btn-secondary text-white">Repo Link</a></div></div>`;
+        newNodeThree.innerHTML = `<div class="card shadow mb-3"><img src="${response[x].projectImg.asset.url}" class="card-img-top project-image" alt="Project Image here"/><div class="card-body"><h5 class="card-title text-decoration-underline">${response[x].NameOfProject}</h5><p class="card-text">${response[x].descOfProject}</p><div class="project-links"><a href="${response[x].linkToProject}" target="_blank" class="btn btn-primary text-white" style="margin-right: 1rem;">Project Link</a><a href="${response[x].linkToProjectRepo}" target="_blank" class="btn btn-secondary text-white">Repo Link</a></div></div></div>`;
       }
       containerProjectsDocRowVar.appendChild(newNodeThree);
     } else {
@@ -120,7 +191,7 @@ async function fetchFunction() {
       carouselIdPlaceVar.appendChild(newNodeFour);
     }
 
-    // console.log(x + ': ' + response[x].langImage);
+    // console.log(x + ': ' + response[x].projectImg.asset.url);
     // console.log(JSON.stringify(response[x].langImage.asset.url, null, 4));
     // console.log(x + ': ' + response[x].frameLibImage);
   }

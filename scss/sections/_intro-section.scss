@@ -10,33 +10,25 @@
 
 .intros {
   .video-box {
-    position: relative;
-    a {
-      // @include absoluteCenter;
-      span {
-        i {
-          font-size: 6rem;
-          color: $secondary;
-        }
+    .self-img {
+      max-width: 100%;
+      @include media-breakpoint-up(lg) {
+        max-width: 70%;
+      }
+      @include media-breakpoint-up(md) {
+        max-width: 100%;
       }
     }
   }
 }
 
 .border-animation {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 6rem;
-  height: 6rem;
-  border: 0.55rem solid $white;
-  border-radius: 50%;
-  animation: pulse-border 1.5s linear infinite;
-
-  &--border-1 {
-    animation-delay: 1s;
+  animation: sm-pulse-border 5s linear infinite;
+  @include media-breakpoint-up(lg) {
+    animation: lg-pulse-border 5s linear infinite;
   }
-  &--border-2 {
-    animation-delay: 1.5s;
+
+  @include media-breakpoint-up(md) {
+    animation: md-pulse-border 5s linear infinite;
   }
 }

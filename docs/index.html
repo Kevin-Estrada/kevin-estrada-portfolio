@@ -34,8 +34,8 @@
 
     gtag('config', 'G-ZR9V2GGFPS');
   </script>
-<!--Font Awesome Icon Kit-->
-<script src="https://kit.fontawesome.com/e5c7057feb.js" crossorigin="anonymous"></script>
+  <!--Font Awesome Icon Kit-->
+  <script src="https://kit.fontawesome.com/e5c7057feb.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -78,11 +78,15 @@
         <!-- START THE CONTENT FOR THE INTRO  -->
         <div class="col-md-6 intros text-start">
           <h1 class="display-2">
-            <span class="display-2--intro">Hey!, I'm Kevin Estrada</span>
+            <span class="display-2--intro">Kevin Estrada</span>
+            <span class="display-2--subintro border-animation">Your Next Software Engineer</span>
             <span class="display-2--description lh-base">
-              Welcome to my web portfolio where you get to see a little bit about who I am and just some of the
-              projects/hobbies I engage in. Please take the time to look through a piece of my life and get in touch
-              with me if there's any questions of if you just want to chat!
+              Welcome to my portfolio! Please take some time to view my work experiences and projects. If your business
+              needs a digital presence, go ahead and fill out the contact form so we can discuss further on
+              creating/revamping your website.
+            </span>
+            <span class="display-2--description lh-base">
+              In addition, if anything below strikes some interest, please feel free to reach out to have a chat!
             </span>
           </h1>
           <a href="#contact">
@@ -94,7 +98,7 @@
         <!-- START THE CONTENT FOR THE VIDEO -->
         <div class="col-md-6 intros text-end">
           <div class="video-box">
-            <img src="images/intro-background.png" alt="Coding Image" class="img-fluid">
+            <img src="images/Professional-Photo-cropped.png" alt="Coding Image" class="self-img img-fluid">
           </div>
         </div>
       </div>
@@ -110,7 +114,7 @@
   <section id="work-experiences" class="work-experiences">
     <div class="container">
       <div class="row text-center">
-        <h1 class="display-3 fw-bold">My Work Experiences</h1>
+        <h1 class="display-3 fw-bold">Work Experience</h1>
         <div class="heading-line mb-1"></div>
       </div>
       <!-- START THE DESCRIPTION CONTENT  -->
@@ -118,15 +122,15 @@
         <div class="col-md-6 border-right">
           <div class="bg-white p-3">
             <h2 class="fw-bold text-capitalize text-center">
-              My work experience ranges from all sorts of areas.
+              Most recent work experience
             </h2>
           </div>
         </div>
         <div class="col-md-6">
-          <div class="bg-white p-4 text-start">
-            <p class="fw-light">
-              Some of the experiences range from such areas as data operations, ride shring, reaserching, CAD analysis,
-              marketing, etc... Please take a moment to see my most recent experiences!
+          <div class="bg-white px-4 pb-4 text-start">
+            <p class="sub-work-text fw-light">
+              These experiences range from various areas including the utilization of agile methods, supporting data
+              infrastructures using DevOps tatics, and implementing concepts of reducing MTTR.
             </p>
           </div>
         </div>
@@ -140,15 +144,15 @@
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 work-experiences">
           <div class="work-experiences__content">
             <div class="icon d-block fas fa-code"></div>
-            <h3 class="display-3--title mt-1">Associate Consultant</h3>
+            <h3 class="display-3--title mt-1">Software Engineer</h3>
             <p class="lh-lg">
-            <ul>
+            <ul class="list-text-size">
               <li>Company: Capgemini</li>
               <li>Date(s): Feburary 2020 - Current</li>
               <li>Location: Chicago, Il</li>
             </ul>
             </p>
-            <button type="button" onclick="toggleButton()" data-bs-toggle="modal" data-bs-target="#modalOne"
+            <button id="modalBtnOne" type="button" data-bs-toggle="modal" data-bs-target="#modalOne"
               class="rounded-pill btn-rounded border-primary">See More
               <span><i class="fas fa-arrow-right"></i></span>
             </button>
@@ -160,20 +164,21 @@
           </div>
         </div>
       </div>
-      <!-- START THE SPR INTERNSHIP CONTENT  -->
+      <!-- START THE 100Devs CONTENT  -->
       <div class="row">
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 work-experiences mt-4 order-xl-last order-md-last">
+        <div
+          class="col-lg-6 col-md-6 col-sm-12 col-xs-12 work-experiences mt-4 order-xl-last order-md-last mobile-text-start">
           <div class="work-experiences__content">
-            <div class="icon d-block fas fa-paper-plane"></div>
-            <h3 class="display-3--title mt-1">Project Configuration</h3>
+            <div class="icon d-block fas fa-code"></div>
+            <h3 class="display-3--title mt-1">Software Engineer</h3>
             <p class="lh-lg">
-            <ul>
-              <li>Company: USA Strategic Petroleum Reserve Internship</li>
-              <li>Date(s): May 2019 - August 2019</li>
-              <li>Location: New Orleans, LA</li>
+            <ul class="list-text-size">
+              <li>Company: 100Devs Agency</li>
+              <li>Date(s): January - Current</li>
+              <li>Location: Los Angeles, CA</li>
             </ul>
             </p>
-            <button type="button" onclick="toggleButton()" data-bs-toggle="modal" data-bs-target="#modalTwo"
+            <button id="modalBtnTwo" type="button" data-bs-toggle="modal" data-bs-target="#modalTwo"
               class="rounded-pill btn-rounded border-primary">See More
               <span><i class="fas fa-arrow-right"></i></span>
             </button>
@@ -182,32 +187,59 @@
         <div
           class="col-lg-6 col-md-6 col-sm-12 col-xs-12 work-experiences mt-4 text-start order-xl-first order-md-first">
           <div class="work-experiences__pic">
-            <img src="images/coding_pic_2.png" alt="web development illustration" class="img-fluid">
+            <img src="images/coding_pic_2.png" alt="marketing illustration" class="img-fluid">
           </div>
         </div>
       </div>
-      <!-- START THE UNDERGRADUATE STUDENT RESEARCH CONTENT  -->
+      <!-- START THE SPR INTERNSHIP CONTENT  -->
       <div class="row">
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 work-experiences mt-4">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 work-experiences">
           <div class="work-experiences__content">
-            <div class="icon d-block fas fa-cloud-upload-alt"></div>
-            <h3 class="display-3--title mt-1">Undergraduate Student Researcher</h3>
+            <div class="icon d-block fas fa-paper-plane"></div>
+            <h3 class="display-3--title mt-1">Project Configuration</h3>
             <p class="lh-lg">
-            <ul>
-              <li>Company: Texas A&M International University</li>
-              <li>Date(s): August 2018 - May 2019</li>
-              <li>Location: Laredo, TX</li>
+            <ul class="list-text-size">
+              <li>Company: USA Strategic Petroleum Reserve Internship</li>
+              <li>Date(s): May 2019 - August 2019</li>
+              <li>Location: New Orleans, LA</li>
             </ul>
             </p>
-            <button type="button" onclick="toggleButton()" data-bs-toggle="modal" data-bs-target="#modalThree"
+            <button id="modalBtnThree" type="button" data-bs-toggle="modal" data-bs-target="#modalThree"
               class="rounded-pill btn-rounded border-primary">See More
               <span><i class="fas fa-arrow-right"></i></span>
             </button>
           </div>
         </div>
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 work-experiences mt-4 text-end">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 work-experiences text-end">
           <div class="work-experiences__pic">
-            <img src="images/coding_pic_3.png" alt="cloud hosting illustration" class="img-fluid">
+            <img src="images/coding_pic_3.png" alt="web development illustration" class="img-fluid">
+          </div>
+        </div>
+      </div>
+      <!-- START THE UNDERGRADUATE STUDENT RESEARCH CONTENT  -->
+      <div class="row">
+        <div
+          class="col-lg-6 col-md-6 col-sm-12 col-xs-12 work-experiences mt-4 order-xl-last order-md-last mobile-text-start">
+          <div class="work-experiences__content">
+            <div class="icon d-block fas fa-cloud-upload-alt"></div>
+            <h3 class="display-3--title mt-1">Undergraduate Student Researcher</h3>
+            <p class="lh-lg">
+            <ul class="list-text-size">
+              <li>Company: Texas A&M International University</li>
+              <li>Date(s): August 2018 - May 2019</li>
+              <li>Location: Laredo, TX</li>
+            </ul>
+            </p>
+            <button id="modalBtnFour" type="button" data-bs-toggle="modal" data-bs-target="#modalFour"
+              class="rounded-pill btn-rounded border-primary">See More
+              <span><i class="fas fa-arrow-right"></i></span>
+            </button>
+          </div>
+        </div>
+        <div
+          class="col-lg-6 col-md-6 col-sm-12 col-xs-12 work-experiences mt-4 text-start order-xl-first order-md-first">
+          <div class="work-experiences__pic">
+            <img src="images/coding_pic_4.png" alt="cloud hosting illustration" class="img-fluid">
           </div>
         </div>
       </div>
@@ -223,44 +255,32 @@
     </svg>
     <div class="container" id="containerTech">
       <div class="row text-center">
-        <h4 class="fw-bold lead mb-3">Technologies Used Up To Date</h4>
+        <h1 class="display-3 fw-bold lead mb-3 text-white">Technologies Used Up To Date</h1>
         <div class="heading-line mb-5"></div>
       </div>
     </div>
 
     <!--START THE LANGUAGES SECTION-->
     <div class="container" id="containerLangTech">
-      <h4 class="text-center fw-bold lead mb-3">Languages & Web Technologies</h4>
+      <h4 class="text-center fw-bold lead mb-3 text-white text-decoration-underline">Languages & Web Technologies</h4>
       <div class="row justify-content-center" id="containerLangTechRow">
         <div id="langAndTech" class="col-md-4 col-lg-2">
           <div class="technologies__logo-box shadow-sm">
             <p>There is an error that has occured, please try again later!</p>
           </div>
         </div>
-        <!-- <div class="col-md-4 col-lg-2">
-            <div class="technologies__logo-box shadow-sm">
-              <img src="images/technologies/languages/html_css_js.jpg" alt="Javascript" title="Javascript"
-                class="img-fluid">
-            </div>
-          </div> -->
       </div>
     </div>
 
     <!-- START THE FRAMEWORKS/LIBRARIES SECTION CONTENT  -->
     <div class="container">
-      <h4 class="text-center fw-bold lead mb-3">Frameworks & Libraries</h4>
+      <h4 class="text-center fw-bold lead mb-3 text-white text-decoration-underline">Frameworks & Libraries</h4>
       <div class="row justify-content-center" id="containerFrameLibTechRow">
         <div id="libAndFrameworks" class="col-md-4 col-lg-2">
           <div class="technologies__logo-box shadow-sm">
             <p>There is an error that has occured, please try again later!</p>
           </div>
         </div>
-        <!-- <div class="col-md-4 col-lg-2">
-            <div class="technologies__logo-box shadow-sm">
-              <img src="images/technologies/frame_libs/bootstrap5.png" alt="Bootstrap 5" title="Bootstrap 5"
-                class="img-fluid">
-            </div>
-          </div> -->
       </div>
     </div>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -293,112 +313,6 @@
 
       <!-- START THE projects ITEMS  -->
       <div class="row" id="containerProjectsDocRow">
-        <!-- <div class="col-lg-4 col-md-6">
-          <div class="card shadow">
-            <div class="card-body">
-              <h5 class="card-title text-decoration-underline">Project One</h5>
-              <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam quasi commodi, nemo laboriosam sunt optio ex eaque consequuntur facere iusto quaerat consectetur architecto corrupti. Similique ab aliquid dignissimos voluptatem at!</p>
-              <a href="#" class="btn btn-primary text-white">Project Link</a>
-              <a href="#" class="btn btn-secondary text-white">Repo Link</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="projects-box shadow">
-            <img src="images/projects/projects-2.jpg" alt="projects 2 image" title="projects 2 picture"
-              class="img-fluid">
-            <div class="projects-info">
-              <div class="caption">
-                <h4>project name goes here 2</h4>
-                <p>category project</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="projects-box shadow">
-            <img src="images/projects/projects-3.jpg" alt="projects 3 image" title="projects 3 picture"
-              class="img-fluid">
-            <div class="projects-info">
-              <div class="caption">
-                <h4>project name goes here 3</h4>
-                <p>category project</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="projects-box shadow">
-            <img src="images/projects/projects-4.jpg" alt="projects 4 image" title="projects 4 picture"
-              class="img-fluid">
-            <div class="projects-info">
-              <div class="caption">
-                <h4>project name goes here 4</h4>
-                <p>category project</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="projects-box shadow">
-            <img src="images/projects/projects-5.jpg" alt="projects 5 image" title="projects 5 picture"
-              class="img-fluid">
-            <div class="projects-info">
-              <div class="caption">
-                <h4>project name goes here 5</h4>
-                <p>category project</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="projects-box shadow">
-            <img src="images/projects/projects-6.jpg" alt="projects 6 image" title="projects 6 picture"
-              class="img-fluid">
-            <div class="projects-info">
-              <div class="caption">
-                <h4>project name goes here 6</h4>
-                <p>category project</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="projects-box shadow">
-            <img src="images/projects/projects-7.jpg" alt="projects 7 image" title="projects 7 picture"
-              class="img-fluid">
-            <div class="projects-info">
-              <div class="caption">
-                <h4>project name goes here 7</h4>
-                <p>category project</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="projects-box shadow">
-            <img src="images/projects/projects-8.jpg" alt="projects 8 image" title="projects 8 picture"
-              class="img-fluid">
-            <div class="projects-info">
-              <div class="caption">
-                <h4>project name goes here 8</h4>
-                <p>category project</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="projects-box shadow">
-            <img src="images/projects/projects-9.jpg" alt="projects 9 image" title="projects 9 picture"
-              class="img-fluid">
-            <div class="projects-info">
-              <div class="caption">
-                <h4>project name goes here 9</h4>
-                <p>category project</p>
-              </div>
-            </div>
-          </div>
-        </div> -->
       </div>
     </div>
   </section>
@@ -421,114 +335,6 @@
       <div class="row align-items-center">
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-inner" id="carouselIdPlace">
-            <!-- CAROUSEL ITEM 1
-            <div class="carousel-item active">
-              certificates card 
-              <div class="certificates__card">
-                <h3>Certificate Number One</h3>
-                <ul class="certificates__desc">
-                  <li>
-                    Organization issuer:
-                  </li>
-                  <li>
-                    Date Issued:
-                  </li>
-                  <li>
-                    Certificate ID:
-                  </li>
-                  <li>
-                    <a href="https://www.google.com" target="_blank">See Certificate</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            CAROUSEL ITEM 2
-            <div class="carousel-item">
-              certificates card 
-              <div class="certificates__card">
-                <p class="lh-lg">
-                  <i class="fas fa-quote-left"></i>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Placeat aut consequatur illo animi optio exercitationem doloribus eligendi iusto atque repudiandae.
-                  Distinctio.
-                  <i class="fas fa-quote-right"></i>
-                <div class="ratings p-1">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                </p>
-              </div>
-              client picture 
-              <div class="certificates__picture">
-                <img src="images/certificates/client-2.jpg" alt="client-2 picture" class="rounded-circle img-fluid">
-              </div>
-              client name & role 
-              <div class="certificates__name">
-                <h3>Client 2</h3>
-                <p class="fw-light">Role 2</p>
-              </div>
-            </div>
-            CAROUSEL ITEM 3
-            <div class="carousel-item">
-              certificates card 
-              <div class="certificates__card">
-                <p class="lh-lg">
-                  <i class="fas fa-quote-left"></i>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Placeat aut consequatur illo animi optio exercitationem doloribus eligendi iusto atque repudiandae.
-                  Distinctio.
-                  <i class="fas fa-quote-right"></i>
-                <div class="ratings p-1">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                </p>
-              </div>
-              client picture 
-              <div class="certificates__picture">
-                <img src="images/certificates/client-3.jpg" alt="client-3 picture" class="rounded-circle img-fluid">
-              </div>
-              client name & role 
-              <div class="certificates__name">
-                <h3>Client 3</h3>
-                <p class="fw-light">Role 3</p>
-              </div>
-            </div>
-            CAROUSEL ITEM 4
-            <div class="carousel-item">
-              certificates card 
-              <div class="certificates__card">
-                <p class="lh-lg">
-                  <i class="fas fa-quote-left"></i>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Placeat aut consequatur illo animi optio exercitationem doloribus eligendi iusto atque repudiandae.
-                  Distinctio.
-                  <i class="fas fa-quote-right"></i>
-                <div class="ratings p-1">
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                  <i class="fas fa-star"></i>
-                </div>
-                </p>
-              </div>
-              client picture 
-              <div class="certificates__picture">
-                <img src="images/certificates/client-4.jpg" alt="client-4 picture" class="rounded-circle img-fluid">
-              </div>
-              client name & role 
-              <div class="certificates__name">
-                <h3>Client 4</h3>
-                <p class="fw-light">Role 4</p>
-              </div>
-            </div> -->
           </div>
           <div class="text-center">
             <button class="btn btn-outline-light fas fa-long-arrow-alt-left" type="button"
@@ -674,8 +480,7 @@
                 class="shadow form-control form-control-lg" required></textarea>
             </div>
             <div class="text-center d-grid mt-1">
-              <button type="submit" value="submit" onclick="toggleButton()"
-                class="btn btn-primary rounded-pill pt-3 pb-3">
+              <button type="submit" value="submit" class="btn btn-primary rounded-pill pt-3 pb-3">
                 <span id="spinnerIcon" class="spinner-border spinner-border-sm visually-hidden" role="status"
                   aria-hidden="true"></span>
                 Submit
@@ -802,27 +607,25 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title display-3--title" id="modalOneLabel">Responsibilites and Tasks</h5>
-          <button type="button" onclick="toggleButton()" class="btn-close" data-bs-dismiss="modal"
+          <button id="closeXModalOne" type="button" class="btn-close" data-bs-dismiss="modal"
             aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <ul>
-            <li>As a new hire, underwent various training's in the Java language to understand how to integrate various
-              OOP concepts using JDBC, Spring, SpringBoot, MySQL, and Apache.</li>
-            <li>In addition to Java training, went through SDET training that included using Junit, Cucumber Framework,
-              and user stories to test application edge cases.</li>
-            <li>Worked in diﬀerent projects within ﬁnancial institutions that entitled a support role for software
-              applications and cloud data.</li>
-            <li>Using ServiceNow to keep track of any user incidents and change implementation requests that come into
-              our team's queue and act accordingly to resolve incidents or execute changes.</li>
-            <li>Provided support for various tasks such as monitoring ﬁle transfers, application status, implementing
-              changes, creating technical documentation, etc..</li>
-            <li>Joined various meetings to either provide updates on any job failures, batch incidents, or any support
-              related issues to the rest of the team.</li>
+            <li>As a new hire, underwent training in Java to understand the fundamentals necessary for various client-based projects. In addition, the training covered how to integrate various OOP concepts using JDBC, Spring, SpringBoot, MySQL, and Apache.</li>
+            <li>Performed testing with both JUnit and Cucumber Frameworks to enhance the performance of certain methods within the codebase.</li>
+            <li>Interacted with various clients on different projects to ensure all deliverables are met promptly.</li>
+            <li>Validated the data source and destination between on-premise databases to the cloud databases, using the following software: AWS S3, DynamoDB, Cloudwatch, and Snowflake.</li>
+            <li>Reduced overall mean time to respond (MTTR) by over 20% with the efforts of creating a dashboard in ServiceNow that provided reliable oversight.</li>
+            <li>Improved the retention period of incident tickets by 30% by creating or utilizing existing scripts to resolve a ticket within ServiceNow.</li>
+            <li>Participated in client meetings to discuss updates and next steps on project-relevant issues about job failures, data batch incidents, and other support-related topics.</li>
+            <li>Decreased time for new people to grasp team workflows by weeks through the creation of technical documentation using mkdocs and Github Pages.</li>
+            <li>Led a team of individuals to complete multiple automation tasks as per the clients' contractual bucket numbers through bash scripting, Autosys job setup, and using REST APIs.</li>
+            <li>Utilized Jira to improve the efficiency of the team's work velocity by 30% through the creation of initiatives, user stories, and features corresponding to each automation idea.</li>
           </ul>
         </div>
         <div class="modal-footer">
-          <button type="button" onclick="toggleButton()" class="btn btn-secondary"
+          <button id="closeModalOneFooter" type="button" class="btn btn-secondary"
             data-bs-dismiss="modal">Close</button>
         </div>
       </div>
@@ -830,13 +633,39 @@
   </div>
 
   <!-- Modal Two -->
-  <div class="modal fade" id="modalTwo" data-bs-backdrop="static" tabindex="-1" aria-labelledby="modalTwoLabel"
+  <div class="modal fade" id="modalTwo" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="modalTwoLabel"
     aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="modalTwoLabel">Responsibilites and Tasks</h5>
-          <button type="button" onclick="toggleButton()" class="btn-close" data-bs-dismiss="modal"
+          <h5 class="modal-title display-3--title" id="modalTwoLabel">Responsibilites and Tasks</h5>
+          <button id="closeXModalTwo" type="button" class="btn-close" data-bs-dismiss="modal"
+            aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <ul>
+            <li>Collaborated with a team of developers to build modern and responsive web applications using best practices.</li>
+            <li>Built and delivered semantically structured full-stack web applications.</li>
+            <li>Applied agile methodologies like SCRUM for project management solutions that include sprints, sprint planning, and sprint velocity.</li>
+            <li>Produced stable web applications on a contract-based proposition to clients who needed a digital presence.</li>
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button id="closeModalTwoFooter" type="button" class="btn btn-secondary"
+            data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Three -->
+  <div class="modal fade" id="modalThree" data-bs-backdrop="static" tabindex="-1" aria-labelledby="modalThreeLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title display-3--title" id="modalThreeLabel">Responsibilites and Tasks</h5>
+          <button id="closeXModalThree" type="button" class="btn-close" data-bs-dismiss="modal"
             aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -852,21 +681,21 @@
           </ul>
         </div>
         <div class="modal-footer">
-          <button type="button" onclick="toggleButton()" class="btn btn-secondary"
+          <button id="closeModalThreeFooter" type="button" class="btn btn-secondary"
             data-bs-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Modal Three -->
-  <div class="modal fade" id="modalThree" data-bs-backdrop="static" tabindex="-1" aria-labelledby="modalThreeLabel"
+  <!-- Modal Four -->
+  <div class="modal fade" id="modalFour" data-bs-backdrop="static" tabindex="-1" aria-labelledby="modalFourLabel"
     aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="modalThreeLabel">Responsibilites and Tasks</h5>
-          <button type="button" onclick="toggleButton()" class="btn-close" data-bs-dismiss="modal"
+          <h5 class="modal-title display-3--title" id="modalFourLabel">Responsibilites and Tasks</h5>
+          <button id="closeXModalFour" type="button" class="btn-close" data-bs-dismiss="modal"
             aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -880,7 +709,7 @@
           </ul>
         </div>
         <div class="modal-footer">
-          <button type="button" onclick="toggleButton()" class="btn btn-secondary"
+          <button id="closeModalFourFooter" type="button" class="btn btn-secondary"
             data-bs-dismiss="modal">Close</button>
         </div>
       </div>
@@ -894,15 +723,13 @@
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title" id="formModalLabel">Email Status</h5>
-          <button type="button" onclick="toggleButton()" class="btn-close" data-bs-dismiss="modal"
-            aria-label="Close"></button>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <p id="formSubText"></p>
         </div>
         <div class="modal-footer">
-          <button type="button" onclick="toggleButton()" class="btn btn-secondary"
-            data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
         </div>
       </div>
     </div>

@@ -4,8 +4,12 @@
   position: relative;
   padding: 4rem 0;
 
+  .sub-work-text {
+    font-size: 1.15rem;
+  }
+
   &__content {
-    padding: 1rem;
+    padding: 0.5rem;
     margin-top: 0;
 
     p {
@@ -16,9 +20,9 @@
       }
     }
 
-    ul {
+    .list-text-size {
       list-style-type: none;
-      font-size: 1rem;
+      font-size: 1.15rem;
     }
 
     @include media-breakpoint-up(lg) {
@@ -37,5 +41,15 @@
 
   &__pic {
     max-width: 100%;
+  }
+}
+
+.mobile-text-start {
+  text-align: start;
+  @include media-breakpoint-up(lg) {
+    text-align: end;
+  }
+  @include media-breakpoint-up(md) {
+    text-align: end;
   }
 }
