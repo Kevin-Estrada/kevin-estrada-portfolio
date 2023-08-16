@@ -11,17 +11,15 @@ jobs:
 
     steps:
       - name: Checkout source Git branch
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Install and Build
         run: |
           cd frontend/
-          sudo npm install -g browserify
-          sudo npm install
-          npm run build-bundle-js
+          npm ci
 
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@4.1.4
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
           folder: frontend/
