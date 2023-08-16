@@ -1,5 +1,7 @@
-const client = require('./client');
-window.onload = fetchFunction;
+import { clientSanity } from "./client.js";
+// window.onload = fetchFunction;
+const response = await clientSanity();
+window.onload = assignElements(response);
 
 const form = document.querySelector('.contact-form');
 let firstName = document.getElementById('inputFirstName');
@@ -149,50 +151,53 @@ async function main() {
   }
 }
 
-async function fetchFunction() {
-  let response = await client.fetch(query);
-  var numCount = 0;
-  for (let x in response) {
-    // console.log(x);
-    // console.log(Object.keys(response[x])[0]);
+async function assignElements(fetchresult) {
+  try {
+    let response = await fetchresult["result"]
+    var numCount = 0;
+    for (let x in response) {
+      // console.log(response[x]);
 
-    if (Object.keys(response[x])[0] == 'langAltText') {
-      containerLangTechDisplay.style.display = 'none';
-      var newNodeOne = document.createElement('div');
-      newNodeOne.className = 'col-md-4 col-lg-2';
-      newNodeOne.innerHTML = `<div class="technologies__logo-box shadow-sm"><a href="${response[x].langLinkToDocs}" target="_blank"><img src="${response[x].langImage.asset.url}" alt="${response[x].langAltText}" title="${response[x].langAltText}"class="img-fluid"></a></div>`;
-      containerLangTechRowVar.appendChild(newNodeOne);
-    } else if (Object.keys(response[x])[0] == 'frameLibAltText') {
-      containerFrameLibTechDisplay.style.display = 'none';
-      var newNodeTwo = document.createElement('div');
-      newNodeTwo.className = 'col-md-4 col-lg-2';
-      newNodeTwo.innerHTML = `<div class="technologies__logo-box shadow-sm"><a href="${response[x].frameLibLinkToDocs}" target="_blank"><img src="${response[x].frameLibImage.asset.url}" alt="${response[x].frameLibAltText}" title="${response[x].frameLibAltText}"class="img-fluid"></a></div>`;
-      containerFrameLibTechRowVar.appendChild(newNodeTwo);
-    } else if (Object.keys(response[x])[0] == 'NameOfProject') {
-      var newNodeThree = document.createElement('div');
-      newNodeThree.className = 'col-lg-4 col-md-6';
-      if (response[x].linkToProject == 'NA') {
-        newNodeThree.innerHTML = `<div class="card shadow mb-3"><img src="images/comingSoon.jpg" style="height:300px;" class="card-img-top project-image" alt="Project Coming Soon"/><div class="card-body"><h5 class="card-title text-decoration-underline">${response[x].NameOfProject}</h5><p class="card-text">${response[x].descOfProject}</p><div class="project-links"><a href="pages/project-not-found.html" target="_blank" class="btn btn-primary text-white" style="margin-right: 1rem;">Project Link</a><a href="${response[x].linkToProjectRepo}" target="_blank" class="btn btn-secondary text-white">Repo Link</a></div></div></div>`;
+      if (response[x]["langAltText"] != null) {
+        containerLangTechDisplay.style.display = 'none';
+        var newNodeOne = document.createElement('div');
+        newNodeOne.className = 'col-md-4 col-lg-2';
+        newNodeOne.innerHTML = `<div class="technologies__logo-box shadow-sm"><a href="${response[x].langLinkToDocs}" target="_blank"><img src="${response[x].langImage.asset.url}" alt="${response[x].langAltText}" title="${response[x].langAltText}"class="img-fluid"></a></div>`;
+        containerLangTechRowVar.appendChild(newNodeOne);
+      } else if (response[x]["frameLibAltText"] != null) {
+        containerFrameLibTechDisplay.style.display = 'none';
+        var newNodeTwo = document.createElement('div');
+        newNodeTwo.className = 'col-md-4 col-lg-2';
+        newNodeTwo.innerHTML = `<div class="technologies__logo-box shadow-sm"><a href="${response[x].frameLibLinkToDocs}" target="_blank"><img src="${response[x].frameLibImage.asset.url}" alt="${response[x].frameLibAltText}" title="${response[x].frameLibAltText}"class="img-fluid"></a></div>`;
+        containerFrameLibTechRowVar.appendChild(newNodeTwo);
+      } else if (response[x]["NameOfProject"] != null) {
+        var newNodeThree = document.createElement('div');
+        newNodeThree.className = 'col-lg-4 col-md-6';
+        if (response[x]["linkToProject"] == 'NA') {
+          newNodeThree.innerHTML = `<div class="card shadow mb-3"><img src="images/comingSoon.jpg" style="height:300px;" class="card-img-top project-image" alt="Project Coming Soon"/><div class="card-body"><h5 class="card-title text-decoration-underline">${response[x].NameOfProject}</h5><p class="card-text">${response[x].descOfProject}</p><div class="project-links"><a href="pages/project-not-found.html" target="_blank" class="btn btn-primary text-white" style="margin-right: 1rem;">Project Link</a><a href="${response[x].linkToProjectRepo}" target="_blank" class="btn btn-secondary text-white">Repo Link</a></div></div></div>`;
+        } else {
+          newNodeThree.innerHTML = `<div class="card shadow mb-3"><img src="${response[x].projectImg.asset.url}" class="card-img-top project-image" alt="Project Image here"/><div class="card-body"><h5 class="card-title text-decoration-underline">${response[x].NameOfProject}</h5><p class="card-text">${response[x].descOfProject}</p><div class="project-links"><a href="${response[x].linkToProject}" target="_blank" class="btn btn-primary text-white" style="margin-right: 1rem;">Project Link</a><a href="${response[x].linkToProjectRepo}" target="_blank" class="btn btn-secondary text-white">Repo Link</a></div></div></div>`;
+        }
+        containerProjectsDocRowVar.appendChild(newNodeThree);
       } else {
-        newNodeThree.innerHTML = `<div class="card shadow mb-3"><img src="${response[x].projectImg.asset.url}" class="card-img-top project-image" alt="Project Image here"/><div class="card-body"><h5 class="card-title text-decoration-underline">${response[x].NameOfProject}</h5><p class="card-text">${response[x].descOfProject}</p><div class="project-links"><a href="${response[x].linkToProject}" target="_blank" class="btn btn-primary text-white" style="margin-right: 1rem;">Project Link</a><a href="${response[x].linkToProjectRepo}" target="_blank" class="btn btn-secondary text-white">Repo Link</a></div></div></div>`;
-      }
-      containerProjectsDocRowVar.appendChild(newNodeThree);
-    } else {
-      var newNodeFour = document.createElement('div');
+        var newNodeFour = document.createElement('div');
 
-      if (numCount == 0) {
-        newNodeFour.className = 'carousel-item active';
-        numCount += 1;
-      } else {
-        newNodeFour.className = 'carousel-item';
+        if (numCount == 0) {
+          newNodeFour.className = 'carousel-item active';
+          numCount += 1;
+        } else {
+          newNodeFour.className = 'carousel-item';
+        }
+        newNodeFour.innerHTML = `<div class="certificates__card"><h3>${response[x].nameOfCert}</h3><ul class="certificates__desc"><li>Issuing Organization: ${response[x].issuingOrg}</li><li>Date Issued: ${response[x].issueDate}</li><li>Certificate ID: ${response[x].certId}</li><li><a href="${response[x].certUrl}" target="_blank">See Certificate</a></li></ul></div></div>`;
+        carouselIdPlaceVar.appendChild(newNodeFour);
       }
-      newNodeFour.innerHTML = `<div class="certificates__card"><h3>${response[x].nameOfCert}</h3><ul class="certificates__desc"><li>Issuing Organization: ${response[x].issuingOrg}</li><li>Date Issued: ${response[x].issueDate}</li><li>Certificate ID: ${response[x].certId}</li><li><a href="${response[x].certUrl}" target="_blank">See Certificate</a></li></ul></div></div>`;
-      carouselIdPlaceVar.appendChild(newNodeFour);
     }
 
     // console.log(x + ': ' + response[x].projectImg.asset.url);
     // console.log(JSON.stringify(response[x].langImage.asset.url, null, 4));
     // console.log(x + ': ' + response[x].frameLibImage);
+  } catch (error) {
+    console.error("An error occurred: ", error);
   }
 }
 
